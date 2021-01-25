@@ -1,10 +1,22 @@
 package P04;
 
+import P06.Vidurkis;
+
 public class Mokinys {
 
     private String name;
     private int level;
     private String address;
+    private int[] average;
+
+    public int[] getAverage() {
+        return average;
+    }
+
+    public void setAverage(int[] average) {
+
+        this.average = average;
+    }
 
     public Mokinys(String name){
 
@@ -17,10 +29,14 @@ public class Mokinys {
         this.name =name ;
         this.level = level;
 
+
     }
     public Mokinys(){
         level=2;
         address= "Kupiškis";
+        average= new int[]{8, 9, 8, 10};
+
+
 
     }
 
@@ -50,6 +66,8 @@ public class Mokinys {
     public void setAddress(String address) {
         this.address = address;
     }
+
+
 }
 
 
