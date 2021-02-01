@@ -1,3 +1,5 @@
+package P0;
+
 public class trikampiai {
 
     public static void main(String[] args) {

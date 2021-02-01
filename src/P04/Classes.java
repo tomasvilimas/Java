@@ -1,7 +1,5 @@
 package P04;
 
-import P06.Vidurkis;
-
 public class Classes {
 
 
@@ -32,7 +30,7 @@ public class Classes {
 
         static void print(Mokinys[] mokiniai){
         for (Mokinys m : mokiniai) {
-            System.out.println("vardas: " + m.getName() + ", Klasė: " + m.getLevel() + ", adresas: " + m.getAddress()+", vidurkis: "+ m.getAverage());
+            System.out.println("vardas: " + m.getName() + ", Klasė: " + m.getLevel() + ", adresas: " + m.getAddress()+", vidurkis:"+m.getPazymiai());
         }
     }
 
@@ -42,23 +40,17 @@ public class Classes {
             return m1.getName().compareTo(m2.getName());
 
         }
-
-
-
         static Mokinys[] readFromDB(){
             Mokinys[] mokiniai = new Mokinys[]{
                     new Mokinys(),
                     new Mokinys("Jonas"),
-                    new Mokinys("Lindeišis", 1),
-                    new Mokinys("Angele", 3),
-                    new Mokinys("Severinas", 2),
-                    new Mokinys("Kalinauskas", 2)
+                    new Mokinys("Lindeišis", 1,new int []{6, 9, 8, 10}),
+                    new Mokinys("Angele", 3, new int [] {2, 9, 8, 7}),
+                    new Mokinys("Severinas", 2, new int [] {8, 5, 8, 10}),
+                    new Mokinys("Kalinauskas", 2, new int [] {8, 3, 8, 10})
 
             };
-
-
             mokiniai[0].setName("Donny");
-
             return mokiniai;
 
 
