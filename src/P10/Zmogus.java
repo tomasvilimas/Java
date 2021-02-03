@@ -6,10 +6,10 @@ public class Zmogus {
 
     private String name;
     private String surname;
-    private int code;
+    private String code;
 
 
-    public Zmogus(String name, String surname, int code) {
+    public Zmogus(String name, String surname, String code) {
         this.name = name;
         this.surname = surname;
         this.code = code;
@@ -31,11 +31,11 @@ public class Zmogus {
         this.surname = surname;
     }
 
-    public int getCode() {
+    public String getCode() {
         return code;
     }
 
-    public void setCode(int code) {
+    public void setCode(String code) {
         this.code = code;
     }
 }
