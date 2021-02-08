@@ -26,7 +26,7 @@ public class Main {
         sarasas.put("467060365", new Zmogus("Antanas", "Petravicius", "467060365"));
         sarasas.put("390010111", new Zmogus("Thomas", "Williams", "390010111"));
         sarasas.put("1269546234164", new Zmogus("Petras", "Petrauskas", "1269546234164"));
-        sarasas.put("39103080649", new Zmogus("Zigmas", "Zigmiontas","39103080649"));
+        sarasas.put("39103080649", new Zmogus("Zigmas", "Zigmiontas", "39103080649"));
 
 
         for (Zmogus a : sarasas.values()) {
@@ -45,12 +45,12 @@ public class Main {
         addMapTest2(sarasas, new Zmogus("Antanas", "Petravicius", "467060365"));
         addMapTest2(sarasas, new Zmogus("Thomas", "Williams", "390010111"));
         addMapTest2(sarasas, new Zmogus("Petras", "Petrauskas", "1269546234164"));
-        addMapTest2(sarasas, new Zmogus("Zigmas", "Zigmiontas","39103080649"));
+        addMapTest2(sarasas, new Zmogus("Zigmas", "Zigmiontas", "39103080649"));
 
 
         for (List<Zmogus> listas : sarasas.values()) {
             System.out.println(listas.size());
-            for (Zmogus z : listas){
+            for (Zmogus z : listas) {
                 System.out.println(z.getName() + "  " + z.getSurname() + "  " + z.getCode());
             }
         }
@@ -58,17 +58,16 @@ public class Main {
     }
 
 
+    static void addMapTest2(Map<String, List<Zmogus>> sarasas, Zmogus z) {
+        String ak = z.getCode();
 
-    static void addMapTest2(Map<String, List<Zmogus>> sarasas, Zmogus z){
-        String ak= z.getCode();
-
-        if(!sarasas.containsKey(ak)){
-            List<Zmogus>zmonesAk= new ArrayList<>();
+        if (!sarasas.containsKey(ak)) {
+            List<Zmogus> zmonesAk = new ArrayList<>();
             zmonesAk.add(z);
             sarasas.put(ak, zmonesAk);
 
-        }else {
-            List<Zmogus>zmonesAk = sarasas.get(ak);
+        } else {
+            List<Zmogus> zmonesAk = sarasas.get(ak);
             zmonesAk.add(z);
         }
 
