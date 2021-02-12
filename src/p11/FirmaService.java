@@ -32,6 +32,7 @@ public class FirmaService implements IFirmaService {
 
 
         } catch (FileNotFoundException e) {
+            e.printStackTrace();
             System.err.println("nerasta");
         } catch (IOException e){
             System.err.println("klaida");
@@ -45,8 +46,9 @@ public class FirmaService implements IFirmaService {
        if(fields.length != 5) return null;
 
        try {
+
            Firma firma = new Firma();
-           firma.setId(Integer.parseInt(fields[0]));
+           firma.setId(Integer.parseInt(fields[0].replaceAll("\\uFEFF", "")));
            firma.setDate(LocalDate.parse(fields[1]));
            firma.setName(fields[2]);
            firma.setQty(Integer.parseInt(fields[3]));
@@ -55,7 +57,8 @@ public class FirmaService implements IFirmaService {
            return firma;
 
        }catch (Exception e){
-           System.err.println("melas     " + line);
+           e.printStackTrace();
+           System.err.println("melas     " + e.getMessage());
        }
 
        return null;

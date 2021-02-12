@@ -2,6 +2,8 @@ package p11;
 
 import java.util.List;
 
+
+
 public class FirmaMain {
 
     public static void main(String[] args) {
@@ -20,6 +22,8 @@ public class FirmaMain {
         for (Firma firma : firmos) {
             System.out.println(firma.getId() + " " + firma.getName() + " " +
                     firma.getDate() + " " + firma.getQty() + " " + firma.getPrice());
+
+
         }
 
 //        firmos.forEach(firma -> {

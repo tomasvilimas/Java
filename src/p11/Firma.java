@@ -50,4 +50,15 @@ public class Firma {
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "Firma{" +
+                "id=" + id +
+                ", date=" + date +
+                ", name='" + name + '\'' +
+                ", qty=" + qty +
+                ", price=" + price +
+                '}';
+    }
 }
